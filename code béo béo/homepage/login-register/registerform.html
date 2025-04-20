@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="314536983_126361563562657_2552441360671051605_n.jpg">
+        <title>Registration</title>
+        <link rel="stylesheet" href="loginformstyle.css">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    </head>
+
+    <body>
+        <div class="wholething">
+            <img loading="lazy" src="mmb.jpg" width="180" height="180">
+        
+            <div class="wrapper">
+                <h1>SIGN UP</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class="fi fi-rr-user"></i>         
+                </div>
+                
+                <div class="input-box">
+                    <input type="email" placeholder="Email" required>
+                    <i class="fi fi-rr-envelope"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="Password" id="myInput" required>
+                    <span class="eye" onclick="myFunction()">
+                        <i id="show" class="fi-rr-eye"></i>
+                        <i id="hide" class="fi fi-rr-eye-crossed"></i>
+                    </span>
+
+                </div>
+
+                <div class="input-box">
+                    <input class="confirmPassword" type="password" placeholder="Confirm Password" id="myInput2" required>
+                    <span class="eye" onclick="myFunction2()">
+                        <i id="show2" class="fi-rr-eye"></i>
+                        <i id="hide2" class="fi fi-rr-eye-crossed"></i>
+                    </span>
+
+                </div>
+    
+                <a href="login form.html"><button type="submit" class="button"> Create Account</button></a>
+
+            </div>
+
+        </div>
+        
+        <script>
+            document.querySelector(".button").onclick = function(){
+
+                var password = document.querySelector(".password").value,
+                confirmPassword = document.querySelector(".confirmPassword").value;
+
+                if (password == "") {
+                    alert("Không được để trống!");
+                }
+                else if (password != confirmPassword) {
+                    alert("Password không khớp!")
+                    return false
+                }
+            }
+        </script>
+
+        <script>
+            function myFunction(){
+                var x = document.getElementById("myInput");
+                var y = document.getElementById("show");
+                var z = document.getElementById("hide");
+
+                if(x.type === "password") {
+                    x.type = "text";
+                    y.style.display = "block";
+                    z.style.display = "none";
+                }
+                else{
+                    x.type = "password";
+                    y.style.display = "none";
+                    z.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function myFunction2(){
+                var x = document.getElementById("myInput2");
+                var y = document.getElementById("show2");
+                var z = document.getElementById("hide2");
+
+                if(x.type === "password") {
+                    x.type = "text";
+                    y.style.display = "block";
+                    z.style.display = "none";
+                }
+                else{
+                    x.type = "password";
+                    y.style.display = "none";
+                    z.style.display = "block";
+                }
+            }
+        </script>
+    
+    </body>
+
+</html>
